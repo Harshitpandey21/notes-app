@@ -4,6 +4,12 @@ A multi-user notes service built with **FastAPI** (Python) and **SQLite**.
 
 ---
 
+# 🔗 Live URL
+
+Interactive API docs: https://notes-app-hcnp.onrender.com/docs
+
+---
+
 ## ✅ Features Implemented
 
 | # | Feature | Endpoint |
