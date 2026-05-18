@@ -7,10 +7,10 @@ A multi-user notes service built with **FastAPI** and **SQLite**. Users can regi
 ## 🔗 Live URL
 
 ```
-https://notes-app-xxxx.onrender.com
+https://notes-app-hcnp.onrender.com
 ```
 
-> Interactive API docs: `https://notes-app-xxxx.onrender.com/docs`
+> Interactive API docs: `https://notes-app-hcnp.onrender.com/docs`
 
 ---
 
