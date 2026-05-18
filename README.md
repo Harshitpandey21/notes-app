@@ -203,7 +203,7 @@ notes-app/
 ├── database.py      # Database connection
 ├── requirements.txt # Python dependencies
 ├── Dockerfile       # Docker configuration
-└── .env.example     # Environment variable template
+└── .env     # Environment variable template
 ```
 
 ---
