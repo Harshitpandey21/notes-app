@@ -181,7 +181,7 @@ cd notes-app
 pip install -r requirements.txt
 
 # 3. Create a .env file
-cp .env.example .env
+cp .env
 
 # 4. Start the server
 python -m uvicorn main:app --reload
