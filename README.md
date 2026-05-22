@@ -198,12 +198,12 @@ Interactive docs at **http://localhost:8000/docs**
 notes-app/
 ├── main.py          # All API endpoints
 ├── models.py        # Database table definitions
-├── schemas.py       # Request/response validation
+├── schemas.py       # Schema Structure 
 ├── auth.py          # JWT and password hashing
 ├── database.py      # Database connection
 ├── requirements.txt # Python dependencies
 ├── Dockerfile       # Docker configuration
-└── .env             # Environment variable template (SECRET_KEY, DATABASE_URL)
+└── .env             # Environment variable (SECRET_KEY, DATABASE_URL)
 ```
 
 ---
