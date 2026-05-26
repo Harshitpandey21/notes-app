@@ -1,6 +1,6 @@
 # 📝 Notes App — Backend API
 
-A multi-user notes service built with **FastAPI** and **SQLite**. Users can register, log in, create notes, pin/unpin and share them with others.
+A multi-user notes service built with **FastAPI** and **SQLite**. Users can register, log in, create notes, pin/unpin notes and share them with others.
 
 ---
 
