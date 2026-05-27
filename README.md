@@ -187,7 +187,7 @@ cp .env
 python -m uvicorn main:app --reload
 ```
 
-App runs at **http://localhost:8000**
+Fast API App runs at **http://localhost:8000**
 Interactive docs at **http://localhost:8000/docs**
 
 ---
