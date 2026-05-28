@@ -164,7 +164,7 @@ Get your token by calling `POST /login` and copying the `access_token` from the 
 
 Users can pin important notes so they always appear at the top of their notes list. Calling `PATCH /notes/{id}/pin` toggles the pin on and off.
 
-**Why this feature?** Real-world note apps like Google Keep and Apple Notes all have pinning because users naturally have a few notes they refer to constantly. It adds immediate practical value with minimal complexity.
+**Why this feature?** Real-world note apps like Google Keep and Apple Notes all have pinning because users naturally have a few notes they refer to constantly. It adds immediate practical value with minimal complexity and help users to check their important notes at the top.
 
 ---
 
