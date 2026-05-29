@@ -153,7 +153,7 @@ Toggles the pinned state. Pinned notes appear first in `GET /notes`.
 
 All note endpoints require a JWT token in the header:
 ```
-Authorization: Bearer eyJhbGci...
+Authorization: Requires a Bearer...
 ```
 
 Get your token by calling `POST /login` and copying the `access_token` from the response.
