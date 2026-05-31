@@ -145,7 +145,7 @@ Authorization: Bearer <token>
 PATCH /notes/{id}/pin
 Authorization: Bearer <token>
 ```
-Toggles the pinned state. Pinned notes appear first in `GET /notes`.
+Toggles the pinned state. Pinned and Unpinned notes appear first in `GET /notes`.
 
 ---
 
