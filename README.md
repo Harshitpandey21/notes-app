@@ -218,3 +218,4 @@ notes-app/
 - Sharing with a non-existent user returns `404 Not Found`
 - Empty title or content is rejected with `422 Unprocessable Entity`
 - Password must be at least 6 characters
+- SECRET_KEY must be of 32 character 
