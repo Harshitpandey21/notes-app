@@ -1,16 +1,16 @@
 # 📝 Notes App — Backend API
 
-A multi-user notes service built with **FastAPI** and **SQLite**. Users can register, log in, create notes, pin/unpin notes and share them with others.
+A multi-user notes service built with **FastAPI** and **SQLite**. Users can register, log in, create notes, and share them with others.
 
 ---
 
 ## 🔗 Live URL
 
 ```
-https://notes-app-hcnp.onrender.com
+https://notes-app-xxxx.onrender.com
 ```
 
-> Interactive API docs: `https://notes-app-hcnp.onrender.com/docs`
+> Interactive API docs: `https://notes-app-xxxx.onrender.com/docs`
 
 ---
 
@@ -145,7 +145,7 @@ Authorization: Bearer <token>
 PATCH /notes/{id}/pin
 Authorization: Bearer <token>
 ```
-Toggles the pinned state. Pinned and Unpinned notes appear first in `GET /notes`.
+Toggles the pinned state. Pinned notes appear first in `GET /notes`.
 
 ---
 
@@ -153,7 +153,7 @@ Toggles the pinned state. Pinned and Unpinned notes appear first in `GET /notes`
 
 All note endpoints require a JWT token in the header:
 ```
-Authorization: Requires a Bearer <token>...
+Authorization: Bearer eyJhbGci...
 ```
 
 Get your token by calling `POST /login` and copying the `access_token` from the response.
@@ -164,7 +164,7 @@ Get your token by calling `POST /login` and copying the `access_token` from the 
 
 Users can pin important notes so they always appear at the top of their notes list. Calling `PATCH /notes/{id}/pin` toggles the pin on and off.
 
-**Why this feature?** Real-world note apps like Google Keep and Apple Notes all have pinning feature because users naturally have a few notes they refer to constantly. It adds immediate practical value with minimal complexity and help users to check their important notes at the top which reduces the time to search them.
+**Why this feature?** Real-world note apps like Google Keep and Apple Notes all have pinning because users naturally have a few notes they refer to constantly. It adds immediate practical value with minimal complexity.
 
 ---
 
@@ -181,14 +181,32 @@ cd notes-app
 pip install -r requirements.txt
 
 # 3. Create a .env file
-cp .env
+cp .env.example .env
 
 # 4. Start the server
 python -m uvicorn main:app --reload
 ```
 
-Fast API App runs at **http://localhost:8000**
+App runs at **http://localhost:8000**
 Interactive docs at **http://localhost:8000/docs**
+
+---
+
+## 🐳 Docker
+
+```bash
+docker build -t notes-app .
+docker run -p 8000:8000 -e SECRET_KEY=mysecretkey notes-app
+```
+
+---
+
+## 🔐 Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `SECRET_KEY` | Secret key for signing JWT tokens | `changeme-...` |
+| `DATABASE_URL` | SQLAlchemy database URL | `sqlite:///./notes.db` |
 
 ---
 
@@ -198,12 +216,12 @@ Interactive docs at **http://localhost:8000/docs**
 notes-app/
 ├── main.py          # All API endpoints
 ├── models.py        # Database table definitions
-├── schemas.py       # Schema Structure 
+├── schemas.py       # Request/response validation
 ├── auth.py          # JWT and password hashing
 ├── database.py      # Database connection
 ├── requirements.txt # Python dependencies
 ├── Dockerfile       # Docker configuration
-└── .env             # Environment variable (SECRET_KEY, DATABASE_URL)
+└── .env.example     # Environment variable template
 ```
 
 ---
@@ -218,5 +236,3 @@ notes-app/
 - Sharing with a non-existent user returns `404 Not Found`
 - Empty title or content is rejected with `422 Unprocessable Entity`
 - Password must be at least 6 characters
-- SECRET_KEY must be of 32 character 
-- Provided a proper Database
