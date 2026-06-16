@@ -219,4 +219,4 @@ notes-app/
 - Empty title or content is rejected with `422 Unprocessable Entity`
 - Password must be at least 6 characters
 - SECRET_KEY must be of 32 character 
-- Provided a proper Database
+- Provided a proper Database to store
