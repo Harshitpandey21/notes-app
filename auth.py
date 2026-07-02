@@ -9,7 +9,7 @@ import os
 from database import get_db
 import models
 
-SECRET_KEY = os.getenv("SECRET_KEY", "changeme-use-a-real-secret-in-production-please")
+SECRET_KEY = os.getenv("SECRET_KEY", "changeme-use-a-real-secret-in-production-please") # secret key should be unique
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24 * 7  
 
