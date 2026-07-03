@@ -10,7 +10,7 @@ class RegisterRequest(BaseModel):
     @classmethod
     def password_strength(cls, v):
         if len(v) < 6:
-            raise ValueError("Password must be at least 6 characters long")
+            raise ValueError("Password must be at least 8 characters long")
         return v
 
 
