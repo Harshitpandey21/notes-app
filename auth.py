@@ -39,7 +39,7 @@ def get_current_user(
     token = credentials.credentials
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
-        detail="Invalid or expired token",
+        detail="Invalid or expired token. Use valid token",
         headers={"WWW-Authenticate": "Bearer"},
     )
     try:
