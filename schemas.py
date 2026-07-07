@@ -28,7 +28,7 @@ class NoteCreate(BaseModel):
     title: str
     content: str
 
-    @field_validator("title")
+    @field_validator("title") # custom decorator 
     @classmethod
     def title_not_empty(cls, v):
         if not v.strip():
