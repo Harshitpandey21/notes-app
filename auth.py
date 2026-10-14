@@ -18,7 +18,7 @@ bearer_scheme = HTTPBearer()
 
 
 def hash_password(password: str) -> str:
-    return pwd_context.hash(password)
+    return pwd_context.hash(password) # function for hash password
 
 
 def verify_password(plain: str, hashed: str) -> bool:
