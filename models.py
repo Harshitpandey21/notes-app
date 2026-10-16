@@ -31,7 +31,7 @@ class User(Base):
 class Note(Base):
     __tablename__ = "notes"
 
-    id = Column(String, primary_key=True, default=generate_uuid)
+    id = Column(String, primary_key=True, default=generate_uuid) # id
     title = Column(String, nullable=False)
     content = Column(Text, nullable=False)
     owner_id = Column(String, ForeignKey("users.id"), nullable=False)
