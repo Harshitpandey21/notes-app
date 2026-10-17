@@ -32,7 +32,7 @@ class Note(Base):
     __tablename__ = "notes"
 
     id = Column(String, primary_key=True, default=generate_uuid) # id
-    title = Column(String, nullable=False)
+    title = Column(String, nullable=False) # title
     content = Column(Text, nullable=False)
     owner_id = Column(String, ForeignKey("users.id"), nullable=False)
     is_pinned = Column(Boolean, default=False, nullable=False)
