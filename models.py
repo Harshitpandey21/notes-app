@@ -33,7 +33,7 @@ class Note(Base):
 
     id = Column(String, primary_key=True, default=generate_uuid) # id
     title = Column(String, nullable=False) # title
-    content = Column(Text, nullable=False)
+    content = Column(Text, nullable=False) # content
     owner_id = Column(String, ForeignKey("users.id"), nullable=False)
     is_pinned = Column(Boolean, default=False, nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
