@@ -6,7 +6,7 @@ from database import Base
 
 
 def generate_uuid():
-    return str(uuid.uuid4())
+    return str(uuid.uuid4()) # generate uuid function
 
 shared_notes = Table(
     "shared_notes",
