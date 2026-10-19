@@ -20,7 +20,7 @@ app = FastAPI(
     title="Notes App API",
     description="A multi-user notes service with multiple features.",
     version="1.0.0",
-)
+)# FastAPI App
 
 app.add_middleware(
     CORSMiddleware,
