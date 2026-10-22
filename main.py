@@ -72,8 +72,8 @@ def register(payload: schemas.RegisterRequest, db: Session = Depends(get_db)):
         hashed_password=hash_password(payload.password),
     )
     db.add(user) # add user in database
-    db.commit()
-    return {"message": "User registered successfully"}
+    db.commit() # commit in database 
+    return {"message": "User registered successfully"} # return message 
 
 
 @app.post("/login", tags=["Auth"])
