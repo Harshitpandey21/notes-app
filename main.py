@@ -26,8 +26,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],# all origins are allowed
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"], # all methods are allowed 
+    allow_headers=["*"], # all headers are allowed 
 )
 
 @app.get("/", tags=["Health"])
@@ -38,8 +38,8 @@ def root():
 @app.get("/about", tags=["About"])
 def about():
     return {
-        "name": "Harshit Pandey",
-        "email": "harshitpandey1234789@gmail.com",
+        "name": "Harshit Pandey", # name 
+        "email": "harshitpandey1234789@gmail.com", # email
         "my features": {
             "Note Pinning": (
                 "Users can pin important notes so they always appear at the top of GET /notes. "
