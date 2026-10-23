@@ -68,7 +68,7 @@ def register(payload: schemas.RegisterRequest, db: Session = Depends(get_db)):
             detail="A user with this email already exists",
         )
     user = models.User(
-        email=payload.email,
+        email=payload.email, # email
         hashed_password=hash_password(payload.password),
     )
     db.add(user) # add user in database
