@@ -69,7 +69,7 @@ def register(payload: schemas.RegisterRequest, db: Session = Depends(get_db)):
         )
     user = models.User(
         email=payload.email, # email
-        hashed_password=hash_password(payload.password),
+        hashed_password=hash_password(payload.password), # hash password
     )
     db.add(user) # add user in database
     db.commit() # commit in database 
