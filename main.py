@@ -142,7 +142,7 @@ def create_note(
         content=payload.content,
         owner_id=current_user.id,
     )
-    db.add(note)
+    db.add(note) # add note
     db.commit()
     db.refresh(note)
     return note
