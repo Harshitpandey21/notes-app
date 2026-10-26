@@ -8,7 +8,7 @@ import json
 from database import engine, get_db
 import models, schemas
 from auth import (
-    hash_password,
+    hash_password, # hash password
     verify_password,
     create_access_token,
     get_current_user,
