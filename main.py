@@ -9,9 +9,9 @@ from database import engine, get_db
 import models, schemas
 from auth import (
     hash_password, # hash password
-    verify_password,
-    create_access_token,
-    get_current_user,
+    verify_password,# verify password
+    create_access_token,# create access token
+    get_current_user, # get current user
 )
 
 models.Base.metadata.create_all(bind=engine)
