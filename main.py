@@ -18,7 +18,7 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="Notes App API", # title
-    description="A multi-user notes service with multiple features.",
+    description="A multi-user notes service with multiple features.", # description
     version="1.0.0",
 )# FastAPI App
 
