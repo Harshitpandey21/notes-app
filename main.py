@@ -30,7 +30,7 @@ app.add_middleware(
     allow_headers=["*"], # all headers are allowed 
 )
 
-@app.get("/", tags=["Health"])
+@app.get("/", tags=["Health"]) # Health
 def root():
     return {"message": "Notes App is running. Visit /docs for API documentation."}
 
