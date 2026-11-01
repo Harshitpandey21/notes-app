@@ -35,7 +35,7 @@ def root():
     return {"message": "Notes App is running. Visit /docs for API documentation."}
 
 
-@app.get("/about", tags=["About"])
+@app.get("/about", tags=["About"]) # About
 def about():
     return {
         "name": "Harshit Pandey", # name 
