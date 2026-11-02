@@ -76,7 +76,7 @@ def register(payload: schemas.RegisterRequest, db: Session = Depends(get_db)):
     return {"message": "User registered successfully"} # return message 
 
 
-@app.post("/login", tags=["Auth"])
+@app.post("/login", tags=["Auth"]) # login
 def login(payload: schemas.LoginRequest, db: Session = Depends(get_db)):
     user = db.query(models.User).filter(models.User.email == payload.email).first()
     if not user or not verify_password(payload.password, user.hashed_password):
