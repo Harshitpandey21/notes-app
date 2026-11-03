@@ -59,7 +59,7 @@ def about():
     }
 
 
-@app.post("/register", status_code=status.HTTP_201_CREATED, tags=["Auth"])
+@app.post("/register", status_code=status.HTTP_201_CREATED, tags=["Auth"]) # register
 def register(payload: schemas.RegisterRequest, db: Session = Depends(get_db)):
     existing = db.query(models.User).filter(models.User.email == payload.email).first()
     if existing:
