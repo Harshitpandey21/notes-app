@@ -115,7 +115,7 @@ def get_all_notes(
     return notes
 
 
-@app.get("/notes/{note_id}", response_model=schemas.NoteResponse, tags=["Notes"])
+@app.get("/notes/{note_id}", response_model=schemas.NoteResponse, tags=["Notes"]) #notes
 def get_note(
     note_id: str,
     current_user: models.User = Depends(get_current_user),
