@@ -29,7 +29,7 @@ class User(Base):
 
 
 class Note(Base):
-    __tablename__ = "notes"
+    __tablename__ = "notes" # table name 
 
     id = Column(String, primary_key=True, default=generate_uuid) # id
     title = Column(String, nullable=False) # title
