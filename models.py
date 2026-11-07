@@ -39,5 +39,5 @@ class Note(Base):
     created_at = Column(DateTime(timezone=True), server_default=func.now())# created at
     updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())# updated at
 
-    owner = relationship("User", back_populates="notes")
+    owner = relationship("User", back_populates="notes") #owner
     shared_with = relationship("User", secondary=shared_notes, back_populates="shared_notes")
