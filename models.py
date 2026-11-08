@@ -9,7 +9,7 @@ def generate_uuid():
     return str(uuid.uuid4()) # generate uuid function
 
 shared_notes = Table(
-    "shared_notes",
+    "shared_notes", # shared notes
     Base.metadata,
     Column("user_id", String, ForeignKey("users.id"), primary_key=True),
     Column("note_id", String, ForeignKey("notes.id"), primary_key=True),
