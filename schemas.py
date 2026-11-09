@@ -20,7 +20,7 @@ class LoginRequest(BaseModel): # Login request class
 
 
 class TokenResponse(BaseModel):
-    access_token: str
+    access_token: str # access token
     token_type: str = "bearer"
 
 
