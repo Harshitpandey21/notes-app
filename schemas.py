@@ -25,8 +25,8 @@ class TokenResponse(BaseModel):
 
 
 class NoteCreate(BaseModel):
-    title: str
-    content: str
+    title: str # title
+    content: str # content
 
     @field_validator("title") # custom decorator 
     @classmethod
