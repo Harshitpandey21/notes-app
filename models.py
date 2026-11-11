@@ -17,7 +17,7 @@ shared_notes = Table(
 
 
 class User(Base):
-    __tablename__ = "users"
+    __tablename__ = "users" # table name = users
 
     id = Column(String, primary_key=True, default=generate_uuid)
     email = Column(String, unique=True, nullable=False, index=True)
