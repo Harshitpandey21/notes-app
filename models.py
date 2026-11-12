@@ -40,4 +40,4 @@ class Note(Base):
     updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())# updated at
 
     owner = relationship("User", back_populates="notes") #owner
-    shared_with = relationship("User", secondary=shared_notes, back_populates="shared_notes")
+    shared_with = relationship("User", secondary=shared_notes, back_populates="shared_notes") # shared with 
