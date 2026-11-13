@@ -15,8 +15,8 @@ class RegisterRequest(BaseModel):
 
 
 class LoginRequest(BaseModel): # Login request class
-    email: EmailStr
-    password: str
+    email: EmailStr # email
+    password: str # password
 
 
 class TokenResponse(BaseModel):
