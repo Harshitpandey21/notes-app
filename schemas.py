@@ -3,8 +3,8 @@ from datetime import datetime
 from typing import Optional
 
 class RegisterRequest(BaseModel):
-    email: EmailStr
-    password: str
+    email: EmailStr #email
+    password: str   #password
 
     @field_validator("password")
     @classmethod
