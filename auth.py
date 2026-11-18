@@ -11,7 +11,7 @@ import models
 
 SECRET_KEY = os.getenv("SECRET_KEY", "changeme-use-a-real-secret-in-production-please") # secret key should be unique
 ALGORITHM = "HS256" # HS256 Algorithm
-ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24 * 7  
+ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24 * 7   # Access token expiry time
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 bearer_scheme = HTTPBearer()
