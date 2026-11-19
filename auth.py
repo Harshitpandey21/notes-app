@@ -14,7 +14,7 @@ ALGORITHM = "HS256" # HS256 Algorithm
 ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24 * 7   # Access token expiry time
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-bearer_scheme = HTTPBearer()
+bearer_scheme = HTTPBearer() # bearer scheme
 
 
 def hash_password(password: str) -> str:
