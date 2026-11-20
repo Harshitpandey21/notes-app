@@ -33,7 +33,7 @@ def create_access_token(data: dict) -> str:
 
 
 def get_current_user(
-    credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme),
+    credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme), # credentials
     db: Session = Depends(get_db),
 ) -> models.User:
     token = credentials.credentials
