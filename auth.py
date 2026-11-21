@@ -34,7 +34,7 @@ def create_access_token(data: dict) -> str:
 
 def get_current_user(
     credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme), # credentials
-    db: Session = Depends(get_db),
+    db: Session = Depends(get_db), # database session
 ) -> models.User:
     token = credentials.credentials
     credentials_exception = HTTPException(
