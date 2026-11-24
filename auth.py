@@ -38,7 +38,7 @@ def get_current_user(
 ) -> models.User:
     token = credentials.credentials # token
     credentials_exception = HTTPException(
-        status_code=status.HTTP_401_UNAUTHORIZED,
+        status_code=status.HTTP_401_UNAUTHORIZED, # status code
         detail="Invalid or expired token. Use valid token",
         headers={"WWW-Authenticate": "Bearer"},
     )
